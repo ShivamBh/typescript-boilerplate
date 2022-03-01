@@ -4,10 +4,11 @@
 	"description": "",
 	"main": "dist/app.js",
 	"scripts": {
-		"dev": "nodemon",
 		"lint": "eslint . --ext .ts",
+		"start": "ts-node -r tsconfig-paths/register src/index.ts",
+		"start:dev": "nodemon",
 		"build": "rimraf ./dist && tsc",
-		"start": "npm run build && node dist/index.js"
+		"start:prod": "node -r ./tsconfig-paths-bootstrap.js dist/index.js"
 	},
 	"keywords": [],
 	"author": "Shivam Bhattacharjee",

@@ -6,7 +6,16 @@
 			"type": "node",
 			"request": "launch",
 			"cwd": "${workspaceRoot}",
-			"runtimeArgs": ["-r", "ts-node/register"],
+			"runtimeArgs": [
+				"-r",
+				"${workspaceRoot}/node_modules/ts-node/register",
+				"-r",
+				"${workspaceRoot}/node_modules/tsconfig-paths/register"
+			],
+			"env": {
+				"NODE_ENV": "development",
+				"TS_NODE_PROJECT": "${workspaceRoot}/tsconfig.json"
+			},
 			"args": ["${workspaceRoot}/src/index.ts"]
 		}
 	]
