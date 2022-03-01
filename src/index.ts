@@ -1,4 +1,4 @@
-import TestConsole from "./lib/test";
+import TestConsole from "@lib/test";
 
 function sayMyName(name: string): void {
 	if (name === "Heisenberg") {
@@ -9,3 +9,4 @@ function sayMyName(name: string): void {
 }
 
 sayMyName("Heisenberg");
+TestConsole();
