@@ -1,0 +1,25 @@
+{
+	"name": "skara-subscriptions",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/app.js",
+	"scripts": {
+		"dev": "nodemon",
+		"lint": "eslint . --ext .ts",
+		"build": "rimraf ./dist && tsc",
+		"start": "npm run build && node dist/index.js"
+	},
+	"keywords": [],
+	"author": "Shivam Bhattacharjee",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^17.0.21",
+		"@typescript-eslint/eslint-plugin": "^5.13.0",
+		"@typescript-eslint/parser": "^5.13.0",
+		"eslint": "^8.10.0",
+		"nodemon": "^2.0.15",
+		"rimraf": "^3.0.2",
+		"ts-node": "^10.5.0",
+		"typescript": "^4.6.2"
+	}
+}
