@@ -2,7 +2,6 @@ version: '3.8'
 services:
   db:
     image: postgres:14.1-alpine
-    restart: always
     environment:
       - POSTGRES_USER=docker
       - POSTGRES_PASSWORD=docker
@@ -11,3 +10,16 @@ services:
       - '5432:5432'
     volumes: 
       - ./db:/var/lib/postgresql/data
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq'
+    ports:
+        - 5672:5672
+        - 15672:15672
+    volumes:
+        - ./rabbitmq/data/:/var/lib/rabbitmq/        
+    networks:
+        - rabbitmq
+networks:
+  rabbitmq:
+    driver: bridge
