@@ -2,7 +2,8 @@
 	"compilerOptions": {
 		"baseUrl": "src",
 		"paths": {
-			"@lib/*": ["lib/*"]
+			"@lib/*": ["lib/*"],
+			"@model/*": ["model/*"]
 		},
 		"module": "commonjs",
 		"esModuleInterop": true,
@@ -13,6 +14,6 @@
 		"resolveJsonModule": true
 	},
 	"lib": ["es2015"],
-	"include": ["src"],
+	"include": ["src", "knex"],
 	"exclude": ["node_modules"]
 }
