@@ -9,7 +9,7 @@ export class TaskService {
     amqp.connect(CONN_URL, function (err, conn) {
       conn.createChannel(function (err, ch) {
         ch.consume(
-          'work',
+          'task',
           function (msg) {
             console.log('.....')
             setTimeout(function () {

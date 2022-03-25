@@ -21,9 +21,12 @@ export class HelloController {
     return await this.rabbitMqService.channel
   }
 
-  @Post('/work')
-  async work(@BodyParam('data') data: object) {
-    return await this.rabbitMqService.publishToQueue('work', data)
+  @Post('/task')
+  async work(@BodyParam('data') data: any) {
+    return await this.rabbitMqService.publishToQueue(
+      'task',
+      JSON.stringify(data)
+    )
   }
 
   // @Post('/sessions')

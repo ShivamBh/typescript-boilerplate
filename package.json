@@ -9,7 +9,7 @@
 		"start:dev": "nodemon",
 		"build": "rimraf ./dist && tsc",
 		"start:prod": "node -r ./tsconfig-paths-bootstrap.js dist/index.js",
-		"reset" : "sudo kill -9 `sudo lsof -t -i:5432`"
+		"reset": "sudo kill -9 `sudo lsof -t -i:5432`"
 	},
 	"keywords": [],
 	"author": "Shivam Bhattacharjee",
@@ -39,6 +39,7 @@
 		"pg": "^8.7.3",
 		"reflect-metadata": "^0.1.13",
 		"routing-controllers": "^0.9.0",
+		"shelljs": "^0.8.5",
 		"typedi": "^0.10.0",
 		"uuid": "^8.3.2"
 	}
